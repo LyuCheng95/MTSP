@@ -110,11 +110,11 @@ def scoring_q1(truck_paths, location_dict):
 		for e, order in enumerate(path):
 			if e == 0:
 				length_list[-1] += distance_calculation(location_dict[path[e]], [0, 0, 0])
-			
 			if e == len(path) - 1:
 				length_list[-1] += distance_calculation(location_dict[path[e]], [0, 0, 0])
 			else:
 				length_list[-1] += distance_calculation(location_dict[path[e]], location_dict[path[e + 1]])
+	print(length_list)
 	return max(length_list)
 
 # used for computing quality score for Q2
